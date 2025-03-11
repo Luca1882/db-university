@@ -1,0 +1,30 @@
+SELECT *
+FROM students
+WHERE Year(date_of_birth) = 1990;
+
+SELECT *
+from courses
+where cfu > 10;
+
+SELECT *
+from students
+where Year(CURDATE()) - year(date_of_birth) > 30;
+
+SELECT *
+from courses
+where year = 1 AND period = 'I semestre';
+
+SELECT*
+from exams
+where date = '2020-06-20' AND hour > '14:00:00';
+
+SELECT *
+from degrees
+where level = 'magistrale';
+
+SELECT count(*)
+from departments;
+
+SELECT count(*)
+from teachers
+where phone is null;

@@ -1,0 +1,17 @@
+SELECT year(enrolment_date), COUNT(*) AS Numero_iscritti
+from students
+group by YEAR(enrolment_date)
+order by YEAR(enrolment_date);
+
+SELECT office_address AS 'Indirizzo Ufficio', COUNT(*) AS Ufficio
+from teachers
+group by office_address
+order by ufficio ;
+
+SELECT AVG(vote) AS 'Media Voto', exam_id
+from exam_student
+group by exam_id;
+
+SELECT department_id, COUNT(*) AS 'Numeri Corsi di Laurea'
+from degrees
+group by department_id;
